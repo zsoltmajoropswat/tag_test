@@ -14,6 +14,7 @@ BASE_TAG="v${DATE}"
 # Properly check if a tag exists
 if [ -n "$tag" ]; then
     echo "There is a tag ($tag) on the current branch ($current_branch)."
+    echo "New tag creation is not needed"
 else
     echo "There is no tag on the current branch ($current_branch)."
     COUNT=$(git tag | grep -E "^${BASE_TAG}" | wc -l)

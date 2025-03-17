@@ -24,4 +24,6 @@ else
     git config --global user.name "Bitbucket Pipeline"
     
     echo ${TAG}
+    git tag ${TAG};
+    git push origin ${TAG};
 fi
